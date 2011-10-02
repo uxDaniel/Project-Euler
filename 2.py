@@ -7,6 +7,10 @@ def fibo(maxnumber, number_list=[1,2]):
     while number_list[-2]+number_list[-1] <= maxnumber:
         number_list.append(number_list[-2]+number_list[-1])
     return number_list
+
 def problem2(limit=4000000):
     fibonacci_numbers = [1,2]
     return sum(x for x in fibo(limit, fibonacci_numbers) if x%2 == 0)
+
+if __name__ == '__main__':
+    print problem2()
